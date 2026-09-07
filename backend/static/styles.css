@@ -1,0 +1,97 @@
+/* PolarPath AI Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --polar-navy-dark: #030712;
+  --polar-navy: #071020;
+  --polar-card: #0b172d;
+  --polar-border: #1a2c4e;
+  --ice-blue: #38bdf8;
+  --ice-cyan: #06b6d4;
+  --aurora-green: #10b981;
+  --hazard-amber: #f59e0b;
+  --hazard-red: #ef4444;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--polar-navy-dark);
+  color: #f1f5f9;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #071020;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Leaflet Map Customizations */
+.leaflet-container {
+  background: #050d1a !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0d1d38 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #23416d !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7) !important;
+}
+
+.leaflet-popup-tip {
+  background: #0d1d38 !important;
+  border: 1px solid #23416d !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Pulse Animation for Hazard Iceberg */
+@keyframes hazardPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.hazard-pulse {
+  animation: hazardPulse 2s infinite;
+}
+
+/* Neon Glow Utilities */
+.glow-cyan {
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+}
+
+.glow-red {
+  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.8));
+}
+
+.glow-amber {
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}

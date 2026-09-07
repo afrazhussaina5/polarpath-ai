@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLARPATH AI — Antarctic Navigation Intelligence | Team AXIOM (SIH 2026 PS 26059)</title>
+  
+  <!-- Leaflet CSS (Local Vendor) -->
+  <link rel="stylesheet" href="/static/vendor/leaflet.css" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS (Local Vendor) -->
+  <script src="/static/vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            polar: {
+              950: '#030816',
+              900: '#071224',
+              850: '#0b1930',
+              800: '#10223d',
+              750: '#152b4d',
+              700: '#1c3863',
+            },
+            ice: {
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom App CSS -->
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-[#030712] text-slate-100 antialiased selection:bg-cyan-500 selection:text-white min-h-screen">
+  <div id="root">
+    <!-- Initial Loading State while React mounts -->
+    <div class="flex items-center justify-center min-h-screen bg-[#030712]">
+      <div class="text-center space-y-4">
+        <div class="w-12 h-12 border-4 border-cyan-500/30 border-t-cyan-400 rounded-full animate-spin mx-auto"></div>
+        <div class="text-cyan-400 font-mono text-sm tracking-wider font-bold">POLARPATH AI INITIALIZING...</div>
+        <div class="text-slate-500 text-xs font-mono">Team AXIOM • SIH 2026 Problem Statement 26059</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS (Local Vendor) -->
+  <script src="/static/vendor/leaflet.js"></script>
+
+  <!-- React 18 & ReactDOM 18 (Local Vendor) -->
+  <script src="/static/vendor/react.production.min.js"></script>
+  <script src="/static/vendor/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone (Local Vendor) -->
+  <script src="/static/vendor/babel.min.js"></script>
+
+  <!-- Main App Script -->
+  <script type="text/babel" src="/static/app.js"></script>
+</body>
+</html>
