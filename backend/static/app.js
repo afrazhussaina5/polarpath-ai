@@ -228,12 +228,14 @@ function PolarPathApp() {
     });
 
     // Dark nautical carto tiles with OSM fallback
-    const cartoLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap contributors &copy; CARTO | PolarPath AI',
-      subdomains: 'abcd',
-      maxZoom: 19,
-      errorTileUrl: ''
-    }).addTo(map);
+   const cartoLayer = L.tileLayer(
+  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_33xc_1_e83fa60fc25e1af6e98b4365',
+  {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO | PolarPath AI',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }
+).addTo(map);
 
     // Zoom buttons in top right
     L.control.zoom({ position: 'topright' }).addTo(map);
