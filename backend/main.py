@@ -46,6 +46,16 @@ if not os.path.exists(STATIC_DIR):
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
+@app.get("/health")
+def health_check():
+    """Simple health check endpoint for Railway deployment."""
+    return {
+        "status": "healthy",
+        "service": "PolarPath AI",
+        "team": "AXIOM",
+        "version": "1.0.0"
+    }
+
 @app.get("/")
 def root():
     index_file = os.path.join(STATIC_DIR, "index.html")
