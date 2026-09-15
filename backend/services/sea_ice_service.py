@@ -1,6 +1,6 @@
 import math
 from typing import List, Dict
-from models.schemas import SeaIceForecast, SeaIceGridCell
+from backend.models.schemas import SeaIceForecast, SeaIceGridCell
 from config import BOUNDS
 
 class SeaIceService:
