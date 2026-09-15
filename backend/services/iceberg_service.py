@@ -1,5 +1,5 @@
 from typing import List, Optional, Dict
-from models.schemas import IcebergDetection
+from backend.models.schemas import IcebergDetection
 from services.trajectory_service import trajectory_service
 
 class IcebergService:
